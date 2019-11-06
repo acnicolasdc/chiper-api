@@ -8,7 +8,7 @@ const lastNameSchema = Joi.string().min(3);
 const phoneSchema = Joi.number().min(7).max(12);
 const emailSchema = Joi.string().email();;
 const addressSchema = Joi.string().min(5);
-const createdAtSchema = Joi.date();
+const createdAtSchema = Joi.date().timestamp();
 
 
 const createUserSchema = Joi.object({
