@@ -13,17 +13,14 @@ class OrdersService {
         const order = await this.fireStore.get(this.collection, orderId);
         return order || {};
     }
-
     async createOrder({ order }) {
         const createdOrderId = await this.fireStore.create(this.collection, order);
         return createdOrderId;
     }
-
     async deleteOrder({ orderId }) {
         const deletedOrderId = await this.fireStore.delete(this.collection, orderId);
         return deletedOrderId;
     }
-
     async updateOrder({ orderId, order }) {
         const updatedOrderId = await this.fireStore.update(this.collection, orderId, order);
         return updatedOrderId;
