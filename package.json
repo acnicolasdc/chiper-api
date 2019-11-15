@@ -4,11 +4,11 @@
   "description": "Backend for Cheppear chatBot aplication",
   "main": "index.js",
   "scripts": {
-    "dev": "DEBUG=express:*,app:* nodemon index",
+    "dev": "cross-env DEBUG=express:*,app:* nodemon index",
     "test": "mocha --exit",
-    "debug": "DEBUG=express:*,app:* npm run start",
-    "inspect": "DEBUG=express:*,app:* nodemon --inspect index",
-    "start": "NODE_ENV=production node index",
+    "debug": "cross-env DEBUG=express:*,app:* npm run start",
+    "inspect": "cross-env DEBUG=express:*,app:* nodemon --inspect index",
+    "start": "cross-env NODE_ENV=production node index",
     "cover": "nyc npm run test",
     "report": "nyc report --reporter=html && open coverage/index.html"
   },
@@ -24,6 +24,7 @@
     "firebase-admin": "^8.6.0"
   },
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
