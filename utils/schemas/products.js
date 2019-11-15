@@ -9,7 +9,7 @@ const priceSchema = Joi.number().min(5);
 const stockSchema = Joi.number().min(0);
 const categoryIdSchema = Joi.string();
 const statusSchema = Joi.number();
-const createdAtSchema = Joi.date();
+const createdAtSchema = Joi.date().timestamp();;
 
 const createProductSchema = Joi.object({
     name: nameSchema.required(),
@@ -18,7 +18,7 @@ const createProductSchema = Joi.object({
     stock: stockSchema.required(),
     category_id: categoryIdSchema.required(),
     status: statusSchema.required(),
-    created_at:createdAtSchema.required(),
+    created_at:createdAtSchema,
 });
 
 const updateProductSchema = Joi.object({

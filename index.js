@@ -3,12 +3,14 @@ const app = express();
 const debug = require("debug")("app:server");
 const { config } = require('./config/index');
 const ordersApi = require('./routes/orders');
+const productApi = require('./routes/products');
 const productCategoriesApi = require('./routes/product_categories');
 const { logErrors, wrapErrors, errorHandler } = require('./utils/middleware/errorHandlers');
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 //Body parser
 app.use(express.json());
 // Routes
+productApi(app);
 ordersApi(app);
 productCategoriesApi(app);
 // Catch 404

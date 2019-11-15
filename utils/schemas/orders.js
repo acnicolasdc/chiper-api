@@ -8,7 +8,7 @@ const orderStatusIdSchema = Joi.string();
 const totalSchema = Joi.number().min(0);
 const addressSchema = Joi.string();
 const deliveryDateSchema = Joi.date();
-const createdAtSchema = Joi.date();
+const createdAtSchema = Joi.date().timestamp();
 
 const createOrderSchema = Joi.object({
     user_id: userIdSchema.required(),
