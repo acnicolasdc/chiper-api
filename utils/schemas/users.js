@@ -12,12 +12,12 @@ const createdAtSchema = Joi.date().timestamp();
 
 
 const createUserSchema = Joi.object({
-    first_name: firstNameSchema.require(),
-    last_name: lastNameSchema.require(),
-    phone: phoneSchema.require(),
-    email: emailSchema.require(),
-    address: addressSchema.require(),
-    created_at:createdAtSchema.require(),
+    first_name: firstNameSchema.required(),
+    last_name: lastNameSchema.required(),
+    phone: phoneSchema.required(),
+    email: emailSchema.required(),
+    address: addressSchema.required(),
+    created_at:createdAtSchema.required(),
 });
 
 const updateUserSchema = Joi.object({

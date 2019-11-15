@@ -6,7 +6,7 @@ const nameSchema = Joi.string().min(2);
 const productAttributeIdSchema = Joi.string();
 
 const createProductAttributeCategorySchema = Joi.object({
-    name: nameSchema.require(),
+    name: nameSchema.required(),
     product_attribute_id: productAttributeIdSchema.required()
 });
 

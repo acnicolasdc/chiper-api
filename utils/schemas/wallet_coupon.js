@@ -9,7 +9,7 @@ const limitSchema = Joi.number().min(0);
 const dateLimitSchema = Joi.date().timestamp();
 
 const createWalletCouponSchema = Joi.object({
-    code: codeSchema.require(),
+    code: codeSchema.required(),
     value: valueSchema.required(),
     limit: limitSchema.required(),
     date_limit: dateLimitSchema.required(),

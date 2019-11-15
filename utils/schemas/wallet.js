@@ -7,8 +7,8 @@ const currentValueSchema = Joi.number().min(0);
 const userIdSchema = Joi.string();
 
 const createWalletSchema = Joi.object({
-    current_value: currentValueSchema.require(),
-    user_id: userIdSchema.require(),
+    current_value: currentValueSchema.required(),
+    user_id: userIdSchema.required(),
 });
 
 const updateWalletSchema = Joi.object({

@@ -10,9 +10,9 @@ const walletCodeSchema = Joi.string();
 const walletIdSchema = Joi.string();
 
 const createWalletHistorySchema = Joi.object({
-    positive: positiveSchema.require(),
-    value: valueSchema.require(),
-    date: dateSchema.require(),
+    positive: positiveSchema.required(),
+    value: valueSchema.required(),
+    date: dateSchema.required(),
     wallet_code: walletCodeSchema.required(),
     wallet_id: walletIdSchema.required(),
 });

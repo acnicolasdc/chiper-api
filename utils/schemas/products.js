@@ -4,7 +4,7 @@ const productIdSchema = Joi.string();
 
 // Atributes to validate
 const nameSchema = Joi.string().min(2);
-const imageSchema = Joi.string().dataUri();
+const imageSchema = Joi.string().uri();
 const priceSchema = Joi.number().min(5);
 const stockSchema = Joi.number().min(0);
 const categoryIdSchema = Joi.string();
@@ -12,13 +12,13 @@ const statusSchema = Joi.number();
 const createdAtSchema = Joi.date();
 
 const createProductSchema = Joi.object({
-    name: nameSchema.require(),
-    image: imageSchema.require(),
-    price: priceSchema.require(),
-    stock: stockSchema.require(),
-    category_id: categoryIdSchema.require(),
-    status: statusSchema.require(),
-    created_at:createdAtSchema.require(),
+    name: nameSchema.required(),
+    image: imageSchema.required(),
+    price: priceSchema.required(),
+    stock: stockSchema.required(),
+    category_id: categoryIdSchema.required(),
+    status: statusSchema.required(),
+    created_at:createdAtSchema.required(),
 });
 
 const updateProductSchema = Joi.object({

@@ -42,9 +42,9 @@ function productCategoriesApi(app) {
     });
 
     router.post('/', validationHandler(createProductCategoriesSchema) ,async function(req, res, next){
-        const { body: productCategories } = req;
+        const { body: productCategory } = req;
         try{
-            const createdProductCategoriesId = await productCategoriesService.createCategory({ productCategories });
+            const createdProductCategoriesId = await productCategoriesService.createCategory({ productCategory });
             res.status(201).json({
                 data: createdProductCategoriesId,
                 message: buildMessage('category', 'create')
