@@ -4,7 +4,7 @@ Cheeper's Backend
 ## Steps for run Backend
 
 #### Check .env.example
-  Open the env.example that is in the root project.
+  Open the env.example. That is in the root project.
   * Check the env.example and create new File with the name ".env".
   * Paste the same content of env.example in ".env".
   * write all values this required of your fireBase credentials in the ".env" file.
@@ -17,7 +17,7 @@ Cheeper's Backend
 You have a lot of options to run the Backend, but this options depends that you want to do.
 
 ##### For Developer mode
-If you want that all changes over code refreshed, use: 'npm run dev'
+If you want to all changes over code refreshed, use: 'npm run dev'
 this option use nodemon to run project.
 
 ##### For Developer Debug or Inspect mode
