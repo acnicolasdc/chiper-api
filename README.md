@@ -39,7 +39,7 @@ If you want to see how much do you cover you test and other things about project
 Command: 'npm run cover'.
 This options run tests project with nyc.
 
-##### For do reports of project
+##### For make reports of project
 If you want to make reports of the result about cover and tests of the project use:
 Command: 'npm run report',
 This option create a HTML file with the table of results about cover and tests.
