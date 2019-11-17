@@ -17,7 +17,7 @@ function usersApi(app) {
         cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
         const { date } = req.query;
         try{
-            const users = await usersService.getOrders({ date });
+            const users = await usersService.getUsers({ date });
             res.status(200).json({
                 data: users,
                 message: buildMessage('user', 'list')
@@ -31,7 +31,7 @@ function usersApi(app) {
         cacheResponse(res, SIXTY_MINUTES_IN_SECONDS);
         const { userId } = req.params;
         try{
-            const user = await usersService.getOrder({ userId });
+            const user = await usersService.getUser({ userId });
             res.status(200).json({
                 data: user,
                 message: buildMessage('user', 'retrieve')
@@ -44,7 +44,7 @@ function usersApi(app) {
     router.post('/', validationHandler(createUserSchema) ,async function(req, res, next){
         const { body: user } = req;
         try{
-            const createdUserId = await usersService.createOrder({ user });
+            const createdUserId = await usersService.createUser({ user });
             res.status(201).json({
                 data: createdUserId,
                 message: buildMessage('user', 'create')
@@ -58,7 +58,7 @@ function usersApi(app) {
         const { userId } = req.params;
         const { body: user } = req;
         try{
-            const updatedUserId = await usersService.updateOrder({ userId, user });
+            const updatedUserId = await usersService.updateUser({ userId, user });
             res.status(200).json({
                 data: updatedUserId,
                 message: buildMessage('user', 'update')
@@ -71,7 +71,7 @@ function usersApi(app) {
     router.delete('/:userId', validationHandler({userId: userIdSchema}, 'params'), async function(req, res, next){
         const { userId } = req.params;
         try{
-            const deletedUserId = await usersService.deleteOrder({ userId });
+            const deletedUserId = await usersService.deleteUser({ userId });
             res.status(200).json({
                 data: deletedUserId,
                 message: buildMessage('user', 'delete')
