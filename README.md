@@ -1,4 +1,4 @@
-# cheeper-api
+# chiper-api
 ![Chiper logo](https://www.kaszek.com/wp-content/uploads/2019/08/chiper-logo.png)
 
 By **Nicolas Reyes Bejarano**
