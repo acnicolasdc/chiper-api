@@ -1,5 +1,8 @@
 # cheeper-api
 Cheeper's Backend
+By Nicolas Reyes Bejarano
+Find me in other platforms like @acnicolasdc.
+Santiago de Cali, Valle del cauca.
 
 ## Steps for run Backend
 
@@ -35,7 +38,7 @@ This options run test about routes and services of project with Mocha.js
 Command: 'npm run test'
 
 ##### For run cover project
-If you want to see how much do you cover you test and other things about project, use:
+If you want to see how much do you cover your test and other things about project, use:
 Command: 'npm run cover'.
 This options run tests project with nyc.
 
