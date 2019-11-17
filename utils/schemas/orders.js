@@ -16,7 +16,7 @@ const createOrderSchema = Joi.object({
     total: totalSchema.required(),
     address: addressSchema.required(),
     delivery_date: deliveryDateSchema.required(),
-    created_at: createdAtSchema.required()
+    created_at: createdAtSchema
 });
 
 const updateOrderSchema = Joi.object({

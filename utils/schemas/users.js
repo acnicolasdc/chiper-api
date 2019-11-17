@@ -17,7 +17,7 @@ const createUserSchema = Joi.object({
     phone: phoneSchema.required(),
     email: emailSchema.required(),
     address: addressSchema.required(),
-    created_at:createdAtSchema.required(),
+    created_at:createdAtSchema
 });
 
 const updateUserSchema = Joi.object({
