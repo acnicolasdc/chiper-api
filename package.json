@@ -8,7 +8,7 @@
     "test": "mocha --exit",
     "debug": "cross-env DEBUG=express:*,app:* npm run start",
     "inspect": "cross-env DEBUG=express:*,app:* nodemon --inspect index",
-    "start": "cross-env NODE_ENV=production node index",
+    "start": "NODE_ENV=production node index",
     "cover": "nyc npm run test",
     "report": "nyc report --reporter=html && open coverage/index.html"
   },
