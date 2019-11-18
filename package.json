@@ -1,5 +1,8 @@
 {
   "name": "cheeper-api",
+  "engines": {
+    "node": "10.x"
+  },
   "version": "1.0.0",
   "description": "Backend for Cheppear chatBot aplication",
   "main": "index.js",
