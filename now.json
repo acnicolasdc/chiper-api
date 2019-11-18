@@ -1,0 +1,19 @@
+{
+    "name": "chiperApi",
+    "version": 2,
+    "builds": [{ "src": "index.js", "use": "@now/node-server"}],
+    "routes": [{ "src": "/(.*)", "dest": "/index.js"}],
+    "env": {
+        "TYPE": "@api-chiper-type",
+        "PROJECT_ID": "@api-chiper-project-id",
+        "PRIVATE_KEY_ID": "@api-chiper-private-key-id",
+        "PRIVATE_KEY": "@api-chiper-private-key",
+        "CLIENT_EMAIL": "@api-chiper-client-email",
+        "CLIENT_ID": "@api-chiper-client-id",
+        "AUTH_URI": "@api-chiper-auth-uri",
+        "TOKEN_URI": "@api-chiper-token-uri",
+        "AUTH_PROVIDER": "@api-chiper-auth-provider",
+        "CLIENT_CERT": "@api-chiper-client-cert",
+        "DB_URL": "@api-chiper-db-url"
+    }
+}
