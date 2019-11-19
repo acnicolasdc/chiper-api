@@ -64,6 +64,73 @@ If you want to make reports of the result about cover and tests of the project u
 
 This option create a _HTML_ file with the table of results about cover and tests.
 
+## Deploy Backend with Zeit Now
+In this section you can do the deployment project with **Zeit Now**.
+
+**Zeit Now** is a cloud application for hosting static applications. This technology works with serverless.
+### Steps for Deploy
+#### Install and Login Zeit Now in your terminal
+You can get Now CLI from either npm. Run the following command from your terminal:
+> **npm i -g now**
+
+With Now CLI installed, you can now login using:
+> **now login**
+
+#### Create a Secret
+To make sensitive information available to your project once deployed, We are using **Now Secrets** for **.env** variables, the data will be encrypted and stored securely, no longer directly accessible by anyone.
+
+List of the secrets to create:
+
+| NOW SECRET  |  .ENV FILE |
+|---|---|
+|api-chiper-type|  TYPE |
+|api-chiper-project-id|  PROJECT_ID |
+|api-chiper-private-key-id|  PRIVATE_KEY_ID |
+|api-chiper-private-key| PRIVATE_KEY  |
+|api-chiper-client-email| CLIENT_EMAIL  |
+|api-chiper-client-id| CLIENT_ID  |
+|api-chiper-auth-uri| AUTH_URI  |
+|api-chiper-token-uri| TOKEN_URI  |
+|api-chiper-auth-provider| AUTH_PROVIDER  |
+|api-chiper-client-cert| CLIENT_CERT  |
+|api-chiper-db-url| DB_URL  |
+
+For create a **Secret** use:
+> **now secrets add _secret-name_  _secret-value_**
+
+In the **_secret-value_** you should to put the **.env** value of the variable, not the name of the variable. 
+
+For create the secret of **PRIVATE_KEY** you should to use a diferent command, because this value has a especial chars.
+
+> **now secrets add _secret-name_ -- "_secret-value_"**
+
+#### Create a Now.json file
+In the root project you should to create a now.json file and put the follow variables and values.
+
+~~~ javascript
+{
+ "name": "project_name",
+ "version": 2,
+ "builds": [{ "src": "index.js", "use": "@now/node"}],
+ "routes": [{ "src": "/(.*)", "dest": "/index.js"}],
+ "env": {
+     "TYPE": "@api-chiper-type",
+     "PROJECT_ID": "@api-chiper-project-id",
+     "PRIVATE_KEY_ID": "@api-chiper-private-key-id",
+     "PRIVATE_KEY": "@api-chiper-private-key",
+     "CLIENT_EMAIL": "@api-chiper-client-email",
+     "CLIENT_ID": "@api-chiper-client-id",
+     "AUTH_URI": "@api-chiper-auth-uri",
+     "TOKEN_URI": "@api-chiper-token-uri",
+     "AUTH_PROVIDER": "@api-chiper-auth-provider",
+     "CLIENT_CERT": "@api-chiper-client-cert",
+     "DB_URL": "@api-chiper-db-url"
+    }
+}
+~~~
+#### Deploy project 🚨🚨
+In the root project run:
+> now
 
 ### If you want to use my Postman Routes.
   Go to my Postman Team, join up and Click over this url:
