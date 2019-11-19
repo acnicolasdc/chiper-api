@@ -9,35 +9,36 @@ _Santiago de Cali, Valle del cauca_.
 ## Steps for run Backend
 
 ### Check .env.example
-  Open the env.example. That is in the root project.
-  Check the env.example and create new File with the name **.env**.
+Open the env.example. That is in the root project. Check the env.example and create a new file **.env**.
   
-  * Paste the same content of env.example in **.env**.
-  * write all values this required of your fireBase credentials in the **.env** file.
+  * Paste the same content of env.example in the new file **.env**.
+  * Fill out all your fireBase credentials values required in the **.env** file.
 
 ### Install Node dependencies
-  In the root project use the follow command to install Node dependencies
-  > **npm install**
+In the root project, use the following command for installing Node dependencies
+
+> **npm install**
 
 ### Run Project
-You have a lot of options to run the Backend, but this options depends that you want to do.
+You have a lot of options to run the Backend, but these options depend on what you want to do.
 
 #### For Developer mode
-If you want to all changes over code refreshed, use: 
+If you want to see all the changes over code in real-time, use: 
 > **npm run dev**
 
-this option use nodemon to run project.
+this option use nodemon to run the project.
 
 #### For Developer Debug or Inspect mode
-If you want ton inspect all that you dev, you can use the follow commands depending you need.
+If you want to inspect all that you dev, you can use the following commands depending on your
+need.
 
 > **npm run debug**
 > 
 > **npm run inspect**.
 
 #### For Production mode
-This option is very simple. you should to use if you want to run project in production.
-this option doesn't have debug options and the consoles.log nothing showing.
+This option is very simple. you should use it if you want to run a project in production. This mode
+doesn't have debug options and the consoles.log doesn´t show anything.
 
 > **npm run start**
 > 
@@ -46,26 +47,26 @@ this option doesn't have debug options and the consoles.log nothing showing.
 
 ### Test, cover and report Project
 #### For run tests project
-This options run test about routes and services of project with Mocha.js
+This option runs several tests over projet's routes and services using Mocha.js
 
 >**npm run test**
 
 #### For run cover project
-If you want to see how much do you cover your test and other things about project, use:
+If you want to see how much your tests and other things about the project you are covering, use:
 
 > **npm run cover**
 
-This options run tests project with **nyc**.
+This options runs the tests project with **nyc**.
 
-#### For make reports of project
-If you want to make reports of the result about cover and tests of the project use:
+#### Creating project reports
+If you want to create reports regarding cover and tests project use:
 
 >**npm run report**
 
-This option create a _HTML_ file with the table of results about cover and tests.
+This option creates an _HTML_ file with tcover and test table results.
 
 ## Deploy Backend with Zeit Now
-In this section you can do the deployment project with **Zeit Now**.
+In this section, you can deploy the project with **Zeit Now**.
 
 **Zeit Now** is a cloud application for hosting static applications. This technology works with serverless.
 ### Steps for Deploy
@@ -73,11 +74,13 @@ In this section you can do the deployment project with **Zeit Now**.
 You can get Now CLI from either npm. Run the following command from your terminal:
 > **npm i -g now**
 
-With Now CLI installed, you can now login using:
+With Now CLI installed, you can log in **Now** using:
 > **now login**
 
 #### Create a Secret
-To make sensitive information available to your project once deployed, We are using **Now Secrets** for **.env** variables, the data will be encrypted and stored securely, no longer directly accessible by anyone.
+To make sensitive information available to your project once deployed, We are using _Now Secrets_
+for **.env** variables, the data will be encrypted and stored securely, no longer directly accessible by
+anyone.
 
 List of the secrets to create:
 
@@ -98,14 +101,15 @@ List of the secrets to create:
 For create a **Secret** use:
 > **now secrets add _secret-name_  _secret-value_**
 
-In the **_secret-value_** you should to put the **.env** value of the variable, not the name of the variable. 
+In the **_secret-value_**, you should put the **.env** variable value, not the variable name.
 
-For create the secret of **PRIVATE_KEY** you should to use a diferent command, because this value has a especial chars.
+For creating the secret of **PRIVATE_KEY** you should use a different command because this value
+has special chars.
 
 > **now secrets add _secret-name_ -- "_secret-value_"**
 
-#### Create a Now.json file
-In the root project you should to create a now.json file and put the follow variables and values.
+#### Create a now.json file
+In the root project you should create a **now.json** file and put the following variables and values.
 
 ~~~ javascript
 {
@@ -133,17 +137,17 @@ In the root project run:
 > now
 
 ### If you want to use my Postman Routes.
-  Go to my Postman Team, join up and Click over this url:
+Go to my Postman Team, join up and click over this url:
   
   <https://app.getpostman.com/join-team?invite_code=6cfa2ad91b05b96ce2309754ee88f474>
 
 #### ¡Important about Postman Routes!
-  I'm using environment to replace <https://localhost:3000> for **{{url}}**
+I'm using the environment to replace <https://localhost:3000> for **{{url}}**
   
-if you don't use this config, you have two options:
+if you aren't using this config, you have two options:
   
-   * Create a environment with **url** like variable.
+   * Create an environment with **url** as a variable.
    * Replace **{{url}}** for <https://localhost:3000> in every Postman route.
 
 
-Happy hack!!
+#### Happy Hack 🤘💻!!
