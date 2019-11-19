@@ -9,7 +9,7 @@ _Santiago de Cali, Valle del cauca_.
 ## Steps for run Backend
 
 ### Check .env.example
-Open the env.example. That is in the root project. Check the env.example and create a new file **.env**.
+Open the env.example. The one you find in the root project. Check the env.example and create a new file **.env**.
   
   * Paste the same content of env.example in the new file **.env**.
   * Fill out all your fireBase credentials values required in the **.env** file.
@@ -20,7 +20,7 @@ In the root project, use the following command for installing Node dependencies
 > **npm install**
 
 ### Run Project
-You have a lot of options to run the Backend, but these options depend on what you want to do.
+You have plenty of options to run the Backend, but these options depend on what you want to do.
 
 #### For Developer mode
 If you want to see all the changes over code in real-time, use: 
@@ -38,7 +38,7 @@ need.
 
 #### For Production mode
 This option is very simple. you should use it if you want to run a project in production. This mode
-doesn't have debug options and the consoles.log doesn´t show anything.
+doesn't have debug options and the consoles.log doesn't show anything.
 
 > **npm run start**
 > 
@@ -47,31 +47,31 @@ doesn't have debug options and the consoles.log doesn´t show anything.
 
 ### Test, cover and report Project
 #### For run tests project
-This option runs several tests over projet's routes and services using Mocha.js
+This option runs several tests over the project's routes and services using Mocha.js
 
 >**npm run test**
 
 #### For run cover project
-If you want to see how much your tests and other things about the project you are covering, use:
+If you want to see how much of your tests and other things about the project you are covering, use:
 
 > **npm run cover**
 
-This options runs the tests project with **nyc**.
+This option runs the tests project with **nyc**.
 
 #### Creating project reports
-If you want to create reports regarding cover and tests project use:
+If you want to create reports regarding cover and tests project, use:
 
 >**npm run report**
 
-This option creates an _HTML_ file with tcover and test table results.
+This option creates an _HTML_ file with cover and test table results.
 
 ## Deploy Backend with Zeit Now
 In this section, you can deploy the project with **Zeit Now**.
 
-**Zeit Now** is a cloud application for hosting static applications. This technology works with serverless.
+**Zeit Now** is a cloud application for hosting static applications. This technology works serverless.
 ### Steps for Deploy
 #### Install and Login Zeit Now in your terminal
-You can get Now CLI from either npm. Run the following command from your terminal:
+You can get Now CLI from npm. Run the following command from your terminal:
 > **npm i -g now**
 
 With Now CLI installed, you can log in **Now** using:
@@ -101,7 +101,7 @@ List of the secrets to create:
 For create a **Secret** use:
 > **now secrets add _secret-name_  _secret-value_**
 
-In the **_secret-value_**, you should put the **.env** variable value, not the variable name.
+In the **_secret-value_**, you should put the **.env** variable value, not the name of the variable.
 
 For creating the secret of **PRIVATE_KEY** you should use a different command because this value
 has special chars.
@@ -144,7 +144,7 @@ Go to my Postman Team, join up and click over this url:
 #### ¡Important about Postman Routes!
 I'm using the environment to replace <https://localhost:3000> for **{{url}}**
   
-if you aren't using this config, you have two options:
+If you aren't using this config, you have two options:
   
    * Create an environment with **url** as a variable.
    * Replace **{{url}}** for <https://localhost:3000> in every Postman route.
