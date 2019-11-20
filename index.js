@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const debug = require("debug")("app:server");
 const { config } = require('./config/index');
+const dialogFlowApi = require('./routes/dialogFlow');
 const usersApi = require('./routes/users')
 const ordersApi = require('./routes/orders');
 const ordersItemsApi = require('./routes/order_items');
@@ -19,6 +20,7 @@ const notFoundHandler = require('./utils/middleware/notFoundHandler');
 //Body parser
 app.use(express.json());
 // Routes
+dialogFlowApi(app);
 // Wallet routes
 walletApi(app);
 walletCouponApi(app);
