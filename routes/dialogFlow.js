@@ -14,9 +14,8 @@ function dialogFlowApi(app) {
         cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
         try {
             const { intent, parameters, outputContexts, queryText } = req.body.queryResult;
-            const response = dialogFlowLib.connect(intent, parameters, outputContexts, queryText);
-            console.log("Identifico: ", response);
-            console.log(intent, parameters, outputContexts, queryText);
+            const response = await dialogFlowLib.connect(intent, parameters, outputContexts, queryText);
+            console.log(response);
             res.status(200).json(response);
         } catch (err) {
             next(err);
