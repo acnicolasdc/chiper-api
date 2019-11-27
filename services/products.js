@@ -5,8 +5,8 @@ class ProductsService {
         this.collection = 'products';
         this.fireStore = new FireBaseLib();
     }
-    async getProducts() {
-        const products = await this.fireStore.getAll(this.collection);
+    async getProducts(filter) {
+        const products = await this.fireStore.getAll(this.collection, filter);
         return products || [];
     }
     async getProduct({ productId }) {

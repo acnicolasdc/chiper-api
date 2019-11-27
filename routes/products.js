@@ -15,9 +15,14 @@ function productsApi(app) {
 
     router.get('/', async function(req, res, next){
         cacheResponse(res, FIVE_MINUTES_IN_SECONDS);
-        const { name } = req.query;
+        const { categoryId } = req.query;
+        const filter = {
+            key:'category_id',
+            operator:'==',
+            value:categoryId
+        }
         try{
-            const products = await productsService.getProducts({ name });
+            const products = await productsService.getProducts(filter);
             res.status(200).json({
                 data: products,
                 message: buildMessage('product', 'list')

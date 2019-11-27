@@ -17,5 +17,9 @@ const config = {
     },
     dbUrl: process.env.DB_URL
 };
+const dialogFlowIntents = {
+    chooseCategory:'ChooseCategory',
+    chooseProduct:'ChooseProduct'
+}
 
-module.exports = { config };
+module.exports = { config, dialogFlowIntents };
